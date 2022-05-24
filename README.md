@@ -85,3 +85,11 @@ Once sweep has ran succesful finetuning can start using:
 ```
 poetry run python robust_detection/train/train_fine_tune.py --og_data_path mnist/mnist3_skip --target_data_path mnist/mnist3_all --agg_case True --fold 0 --sweep_id <sweepid>
 ```
+
+## ProbKT Finetuning DETR model
+
+Similar as for RCNN a sweep is assumed for performing finetuning.
+
+```
+poetry run python robust_detection/train/train_fine_tune.py --og_data_path mnist/mnist3_skip --target_data_path mnist/mnist3_all --agg_case True --fold 0 --sweep_id <sweep-id> --detr True
+```
