@@ -107,3 +107,7 @@ and for DETR:
 ```
 poetry run python robust_detection/train/retrain_detr.py --data_path mnist/mnist3_all --agg_case True --fold 0 --sweep_id <sweep-id>
 ```
+
+## Evaluating models
+
+For evaluating the models the notebooks in this [folder](robust_detection/notebooks) can be used.
