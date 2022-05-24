@@ -93,3 +93,17 @@ Similar as for RCNN a sweep is assumed for performing finetuning.
 ```
 poetry run python robust_detection/train/train_fine_tune.py --og_data_path mnist/mnist3_skip --target_data_path mnist/mnist3_all --agg_case True --fold 0 --sweep_id <sweep-id> --detr True
 ```
+
+## Iterative relabeling
+
+Iterative relabeling can be performed for RCNN for one iteration each time executing, with sweep-id of previous iteration:
+
+```
+poetry run python robust_detection/train/retrain_rcnn.py --data_path mnist/mnist3_all --agg_case True --fold 0 --sweep_id <sweep-id>
+```
+
+and for DETR:
+
+```
+poetry run python robust_detection/train/retrain_detr.py --data_path mnist/mnist3_all --agg_case True --fold 0 --sweep_id <sweep-id>
+```
